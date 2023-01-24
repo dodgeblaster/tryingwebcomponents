@@ -26,6 +26,14 @@ class Header extends HTMLElement {
             otherButton.setAttribute('name', `Other ${this.state.count}`)
         })
     }
+
+    disconnectedCallback() {
+        console.log('disconnected')
+    }
+
+    attributeChangedCallback() {
+        console.log('attributeChangedCallback')
+    }
 }
 
 customElements.define('gj-header', Header)

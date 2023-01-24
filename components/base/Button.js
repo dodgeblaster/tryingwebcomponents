@@ -1,7 +1,7 @@
-class Button extends HTMLElement {
+export class Button extends HTMLElement {
     constructor() {
         super()
-        const name = this.getAttribute('name')
+        const name = this.getAttribute('name') || 'hello'
         const shadow = this.attachShadow({ mode: 'open' })
         shadow.innerHTML = /*html*/ `
             <link rel="stylesheet" href="./style.css" />
